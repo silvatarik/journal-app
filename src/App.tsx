@@ -1,18 +1,17 @@
 
-import './App.css';
-import { JournalVIew } from './components/journal/JournalVIew';
-import { NothingSelected } from './components/journal/NothingSelected';
-import { SideBar } from './components/shared/SideBar';
+//Router
 import { AppRouter } from './routers/AppRouter';
+
+//Redux
+import {Provider} from 'react-redux'
+import { store } from './store/store';
 
 function App() {
   return (
-    <>
-      {/* <SideBar/> */}
-      {/* <NothingSelected/> */}
-      {/* <JournalVIew/> */}
+    <Provider store={store}>
       <AppRouter/>
-    </>
+    </Provider>
+
   );
 }
 
